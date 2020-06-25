@@ -45,12 +45,13 @@ Para esta atividade foram definidos quatro requisitos:
    
    Para facilitar a relação e atribuição das cores, foi criado um struct *Color* com as variáveis associadas aos valores RGBA. Desse modo, foram criados 5 instâncias desses structs para a representação de diferentes cores. A definição dos seus valores é realizada na função *DefineColors*.
   
-  Para a chamada da função, foi utilizada uma função para aleatorizar os valores das coordenadas. Desta forma, esta chamada foi alocada dentro de um laço de repetição para que fossem rasterizados 30 pontos a cada atualização da tela.
+  Para a chamada da função, foi utilizada uma função para aleatorizar os valores das coordenadas. Desta forma, esta chamada foi alocada dentro de um laço de repetição para que fossem rasterizados 3 pontos de cores distintas a cada atualização da tela.
   
   O resultado obtido é ilustrado na Figura abaixo.
   
-  
-  <center>![Resultado PutPixel](https://github.com/SAndradeTC/Computacao-Grafica/blob/master/pontos.png)<\center>
+  <p align="center">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/pontos.png">
+</p>
 
 ### Resultados e discussão
 
