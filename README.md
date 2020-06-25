@@ -49,7 +49,7 @@ Para esta atividade foram definidos quatro requisitos:
   
   O resultado obtido é ilustrado na Figura abaixo.
   
-  ![Resultado PutPixel](URL da imagem)
+  ![Resultado PutPixel](https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png)
 
 ### Resultados e discussão
 
