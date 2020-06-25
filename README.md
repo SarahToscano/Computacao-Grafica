@@ -45,14 +45,21 @@ Para esta atividade foram definidos quatro requisitos:
    
    Para facilitar a relação e atribuição das cores, foi criado um struct *Color* com as variáveis associadas aos valores RGBA. Desse modo, foram criados 5 instâncias desses structs para a representação de diferentes cores. A definição dos seus valores é realizada na função *DefineColors*.
   
-  Para a chamada da função, foi utilizada uma função para aleatorizar os valores das coordenadas. Desta forma, esta chamada foi alocada dentro de um laço de repetição para que fossem rasterizados 3 pontos de cores distintas a cada atualização da tela.
+  Desta forma, a função possui a seguinte estrutura `PutPixel(int x1, int y1, Color *Color_reference)`. Para a definição das coordenadas foi utilizada a função *rand* da biblioteca *times.h* para aleatorizar os valores das coordenadas. 
   
-  O resultado obtido é ilustrado na Figura abaixo.
+  A PutPixel foi alocada dentro de um laço de repetição na função *MyGlDraw*, para que fossem rasterizados 3 pontos de cores distintas, trinta vezes, a cada atualização da tela. O resultado obtido é ilustrado na Figura abaixo.
   
   <p align="center">
   <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/pontos.png">
 </p>
 
-### Resultados e discussão
+#### DrawLine
+
+`DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`
+
+
+#### DrawTriangle
+`DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`
+
 
 ### Referências
