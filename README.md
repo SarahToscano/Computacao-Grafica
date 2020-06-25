@@ -37,7 +37,13 @@ Para esta atividade foram definidos quatro requisitos:
 
   A função *DrawTriangle* recebe como parâmetros três vértice e suas respectivas cores, para que desse modo seja invocada a função *DrawLine* e un triângulo possa ser plotado.
 
-### Estratégias
+### Estratégias e Resultados
+
+#### PutPixel
+   Nesta função a lógica de implementação utilizada baseou-se no cálculo do offset, posição do pixel da tela, e na atribuição da cor desejada para a rasterização do ponto. O offset foi cálculado por meio da expressão 
+   X*4 + Y*4*Altura, no qual o *X* e *Y* representam as coordenadas x e y do ponto a ser rasterizado, e a *Altura* está relacionada a dimenssão da tela.
+   
+   Para facilitar a relação e atribuição das cores, foi criado um struct *Color* com as variáveis associadas aos valores RGBA. Desse modo, foram criados 5 instancias desses structs para a representação de diferentes cores. A definição dos seus valores é realizada na função *DefineColors*.
 
 ### Resultados e discussão
 
