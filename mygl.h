@@ -25,10 +25,14 @@ typedef struct {
 void MyGlDraw(void);
 
 void PutPixel(int x1, int y1, Color *reference);
-void DrawLine (int x1, int y1, int x2, int y2, Color *A, Color *B, Color *Color_reference);
+void DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference);
+void DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference);
 
-float Distance(int x1, int y1, int x2, int y2);
-void ColorGradient(int x1, int y1, int x2, int y2, Color *A, Color *B, Color *C);
+//Funções para o interpolação das cores
+double percetage(Coordinates *p, int x0, int y0);
+void ColorGradient(Coordinates *p, int x0, int y0, Color *A, Color *B, Color *C, Color *color_mix);
+
+#endif  // MYGL_H
 
 
 
