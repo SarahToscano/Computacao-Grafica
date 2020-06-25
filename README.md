@@ -19,7 +19,12 @@ Autora: Sarah Andrade Toscano de Carvalho.
   
 ### Requisitos
 
-Para esta atividade foram definidos três requisitos:
+Para esta atividade foram definidos quatro requisitos:
+
+- [x] **Implementação da Interpolação de cores**  
+
+  Dado dois pontos quaisquers e duas cores, a função de interpolação deve interpolar a cor da linha traçada com base na dimensão da reta e nas cores recebidas.
+  
 - [x] **Implementação da função PutPixel**  
 
   A função *PutPixel* recebe como entrada as coordenadas de um ponto e uma cor (RGBA). Para que dessa forma, possa rasterizar um ponto na memória de vídeo.
