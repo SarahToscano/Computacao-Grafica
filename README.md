@@ -43,7 +43,13 @@ Para esta atividade foram definidos quatro requisitos:
    Nesta função a lógica de implementação utilizada baseou-se no cálculo do offset, posição do pixel da tela, e na atribuição da cor desejada para a rasterização do ponto. O offset foi cálculado por meio da expressão 
    X*4 + Y*4*Altura, no qual o *X* e *Y* representam as coordenadas x e y do ponto a ser rasterizado, e a *Altura* está relacionada a dimenssão da tela.
    
-   Para facilitar a relação e atribuição das cores, foi criado um struct *Color* com as variáveis associadas aos valores RGBA. Desse modo, foram criados 5 instancias desses structs para a representação de diferentes cores. A definição dos seus valores é realizada na função *DefineColors*.
+   Para facilitar a relação e atribuição das cores, foi criado um struct *Color* com as variáveis associadas aos valores RGBA. Desse modo, foram criados 5 instâncias desses structs para a representação de diferentes cores. A definição dos seus valores é realizada na função *DefineColors*.
+  
+  Para a chamada da função, foi utilizada uma função para aleatorizar os valores das coordenadas. Desta forma, esta chamada foi alocada dentro de um laço de repetição para que fossem rasterizados 30 pontos a cada atualização da tela.
+  
+  O resultado obtido é ilustrado na Figura abaixo.
+  
+  ![Resultado PutPixel](URL da imagem)
 
 ### Resultados e discussão
 
