@@ -20,15 +20,15 @@ Autora: Sarah Andrade Toscano de Carvalho.
 ### Requisitos
 
 Para esta atividade foram definidos três requisitos:
-- **[x] Implementação da função PutPixel**  
+- [x] **Implementação da função PutPixel**  
 
   A função *PutPixel* recebe como entrada as coordenadas de um ponto e uma cor (RGBA). Para que dessa forma, possa rasterizar um ponto na memória de vídeo.
   
-- **[x] Implementação da função DrawLine**
+- [x] **Implementação da função DrawLine**
 
   Esta função rasteriza uma linha utilizando o algoritmo de Bresenham. Para isso,receberá como entrada as coordenadas de dois pontos e as cores atribuídas aos seus respectivos vértices. Com os dados dessas cores é realizada uma interpolação e a reta plotada é colorida com uma tonalidade degradê entre essas duas cores. 
 
-- **[x] Implementação da função DrawTriangle**
+- [x] **Implementação da função DrawTriangle**
 
   A função *DrawTriangle* recebe como parâmetros três vértice e suas respectivas cores, para que desse modo seja invocada a função *DrawLine* e un triângulo possa ser plotado.
 
