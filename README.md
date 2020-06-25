@@ -63,3 +63,7 @@ Para esta atividade foram definidos quatro requisitos:
 
 
 ### Referências
+
+- [Framework disponibilizado pelo professor](https://github.com/capagot/icg/tree/master/mygl_framework)
+- [Material sobre interpolaçao de cores em RGBA](http://letslearnbits.blogspot.com/2014/10/icgt1-interpolacao-de-cores.html)
+
