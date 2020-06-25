@@ -49,7 +49,8 @@ Para esta atividade foram definidos quatro requisitos:
   
   O resultado obtido é ilustrado na Figura abaixo.
   
-  ![Resultado PutPixel](https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png)
+  
+  <center>![Resultado PutPixel](https://github.com/SAndradeTC/Computacao-Grafica/blob/master/pontos.png)<\center>
 
 ### Resultados e discussão
 
