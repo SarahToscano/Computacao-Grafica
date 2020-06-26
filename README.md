@@ -59,20 +59,20 @@ A função *DrawLine* utiliza as coordenadas de dois pontos para traçar uma ret
 
 A implementação desta função foi a mais complexa, comparando a com as outras funções desta atividade. Uma vez, que, foi necessário realizar alterações na sua estrtura para garantir que as retas pudessem ser rasterizadas em todos os octantes do plano. Para isso foram analisadas 4 situações:
 
- - [x] **Variação do eixo X negativa, Dx<0**  
+ **1. Variação do eixo X negativa, Dx<0**  
 
    Nesta situação, a reta cresce para o lado negativo, desse modo, faz-se neceessário a inversão dos pontos. Então o ponto de origem é modificado para destino e vice-versa.
 
- - [x] **Variação do eixo Y negativa, Dy<0**  
+ **2. Variação do eixo Y negativa, Dy<0**  
 
    Quando a reta é crescente para o lado negativo do Y, é calculado o módulo do valor desta variação e dessa forma, o ΔY fica positivo para permitir a localização a reta na direção leste/nordeste. Concomitante, foram feitas modificações no aloritmo de Bresenham em relação ao valor calculado para a coordenada Y do ponto a ser rasterizado. Pelo fato do Y estar crescendo para o lado negativo, as atualizações de valores para esta variável devem diminuílo e não somá-lo a 1. 
 
- - [x] **Variação do eixo Y maior do que o eixo X**
+ **3. Variação do eixo Y maior do que o eixo X**
 
     Neste caso, é realizada a atribução da variacao do eixo X ao eixo Y, e vice-versa. Essa situação exige uma atenção especial, pois possui mais casos especiais. Uma vez que a variação do eixo Y é maior que a do X, os parametros do laço de repetição *while* serão alterados para `while(y1>=y2)` ou `while(y1<=y1)`, dependendo do valor do Y1 e Y2. Além disso, assim como na situação anterior, o Y deverá ser decrementado caso o Y1 seja maior que o Y2.
   
 
- - [x] **Variação nula no eixo X**
+ **4. Variação nula no eixo X**
 
     Este caso especial, foi detectado durante os testes de implementação do programa. Dessa forma foi implementada uma lógica de restrição no código, específica para esta situação que quando a variação do eixo x é nula, apenas é aumentado ou decrementado o valor da coordenada Y. Esta situação vai depender da restrição 2.
    
