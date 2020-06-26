@@ -59,9 +59,24 @@ Para esta atividade foram definidos quatro requisitos:
 
 
 #### DrawTriangle
-Esta função consiste em três chamadas da função *DrawLine* para que três retas possam ser rasterizadas e formem o desenho de um triângulo. Cujas arestas possuem cores interpoladas de acordo com a atribuição da cor princiapal para cada vértice. A função se estrutura assim `DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`, no qual p *p* é um ponteiro que contém os dados das coordenadas dos três vértices, os structs *A, B e C* são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida através do cálculo da interpolação.
+Esta função consiste em três chamadas da função *DrawLine* para que três retas possam ser rasterizadas e formem o desenho de um triângulo. Cujas arestas possuem cores interpoladas de acordo com a atribuição da cor princiapal para cada vértice. 
 
-O resultado obtido com essa função é apresentado na Figura a seguir:
+A função se estrutura assim `DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`, no qual o *p* é um ponteiro que contém os dados das coordenadas dos três vértices, os structs *A, B e C* são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida através do cálculo da interpolação.
+
+Pelo fato da função *DrawLine* ter sido configurada para receber apenas dois pontos por vez, a DrawTriangle muda os parâmetros de coordenadas a cada rasterização de linha. Dessa forma, inicialmente é rasterizada a reta AB, em seguida BC e por fim, CA. Como as coordenadas são armazenadas em um struct, os valores das coordenadas são atualizados de acordo com a configuração da reta a ser rasterizada. O trecho de código abaixo exemplifica a atualização de parametros e da chamada da função. Vale salientar, que as cores também variam para cada vértice. 
+
+```
+//Atualização dos valores
+    p->x1 = p->x3;
+    p->y1 = p->y3;
+    p->x2 = x_0;
+    p->y2 = y_0;
+
+//Rasterização da reta C->A
+    DrawLine (p, C, A, Color_reference); 
+```
+
+Por fim, o resultado obtido com essa função é apresentado na Figura a seguir:
 
   <p align="center">
   <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png">
