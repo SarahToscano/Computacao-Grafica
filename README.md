@@ -67,13 +67,13 @@ A implementação desta função foi a mais complexa, comparando a com as outras
 
    Quando a reta é crescente para o lado negativo do Y, é calculado o módulo do valor desta variação e dessa forma, o ΔY fica positivo para permitir a localização a reta na direção leste/nordeste. Concomitante, foram feitas modificações no aloritmo de Bresenham em relação ao valor calculado para a coordenada Y do ponto a ser rasterizado. Pelo fato do Y estar crescendo para o lado negativo, as atualizações de valores para esta variável devem diminuílo e não somá-lo a 1. 
 
- **3. Variação do eixo Y maior do que o eixo X**
-
+ **3. Variação do eixo Y maior do que o eixo X.** 
+ <p>
     Neste caso, é realizada a atribução da variacao do eixo X ao eixo Y, e vice-versa. Essa situação exige uma atenção especial, pois possui mais casos especiais. Uma vez que a variação do eixo Y é maior que a do X, os parametros do laço de repetição *while* serão alterados para `while(y1>=y2)` ou `while(y1<=y1)`, dependendo do valor do Y1 e Y2. Além disso, assim como na situação anterior, o Y deverá ser decrementado caso o Y1 seja maior que o Y2.
   
 
  **4. Variação nula no eixo X**
-
+ <p>
     Este caso especial, foi detectado durante os testes de implementação do programa. Dessa forma foi implementada uma lógica de restrição no código, específica para esta situação que quando a variação do eixo x é nula, apenas é aumentado ou decrementado o valor da coordenada Y. Esta situação vai depender da restrição 2.
    
 Portanto, uma vez que todas essas restrições foram implementadas, a estrutura da função ficou da seguinte forma `DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`. Na qual o *p* é um ponteiro que contém os dados das coordenadas dos dois vértices, os structs *A*, e *B*  são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida para o pixel através do cálculo da interpolação. Abaixo é ilustrado o resultado para a rasterização de 4 linhas com diferentes inclinações e comprimento.
@@ -108,6 +108,13 @@ Por fim, o resultado obtido com essa função é apresentado na Figura a seguir:
   <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png">
 </p>
 
+### Conclusão
+
+Por fim, com todas as funções implementadas ao executar o *MyGlDraw* serão rasterizados, os pontos, linhas e o triângulo, com as coordenadas definidas no escopo do programa. O resultado encontrado está ilustrado abaixo.
+
+  <p align="center">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/todos.png">
+</p>
 
 ### Referências
 
