@@ -58,14 +58,19 @@ A função *DrawLine* utiliza as coordenadas de dois pontos para traçar uma ret
 
 A implementação desta função foi a mais complexa, comparando a com as outras funções desta atividade. Uma vez, que, foi necessário realizar alterações na sua estrtura para garantir que as retas pudessem ser rasterizadas em todos os octantes do plano. Para isso foram analisadas 4 situações:
 
+- [x] **Variação do eixo X negativa, Dx<0**  
 
-- [x] **Implementação da Interpolação de cores**  
+  Dado dois pontos quaisquers e duas cores, a função de interpolação deve interpolar a cor da linha traçada com base na dimensão da reta e nas cores recebidas.
+  
+- [x] **Variação do eixo Y negativa, Dy<0**  
 
-- [x] **Implementação da Interpolação de cores**  
+  A função *PutPixel* recebe como entrada as coordenadas de um ponto e uma cor (RGBA). Para que dessa forma, possa rasterizar um ponto na memória de vídeo.
+  
+- [x] **Variação do eixo Y maior do que o eixo X**
 
-- [x] **Implementação da Interpolação de cores**  
+  Esta função rasteriza uma linha utilizando o algoritmo de Bresenham. Para isso,receberá como entrada as coordenadas de dois pontos e as cores atribuídas aos seus respectivos vértices. Com os dados dessas cores é realizada uma interpolação e a reta plotada é colorida com uma tonalidade degradê entre essas duas cores. 
 
-- [x] **Implementação da Interpolação de cores**  
+- [x] **Variação nula no eixo X**
 
 O resultado obtido foi o seguinte:
 
