@@ -1,4 +1,4 @@
-# Computacao-Grafica
+# Computacao-Gráfica
 Repositório destinado a implementação das atividades práticas desenvolvidas na disciplina de Computação Gráfica, ministrada pelo professor Christian Azambuja, no Centro de Informática da UFPB.
 Autora: Sarah Andrade Toscano de Carvalho.
 
@@ -59,7 +59,13 @@ Para esta atividade foram definidos quatro requisitos:
 
 
 #### DrawTriangle
-`DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`
+Esta função consiste em três chamadas da função *DrawLine* para que três retas possam ser rasterizadas e formem o desenho de um triângulo. Cujas arestas possuem cores interpoladas de acordo com a atribuição da cor princiapal para cada vértice. A função se estrutura assim `DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`, no qual p *p* é um ponteiro que contém os dados das coordenadas dos três vértices, os structs *A, B e C* são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida através do cálculo da interpolação.
+
+O resultado obtido com essa função é apresentado na Figura a seguir:
+
+  <p align="center">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png">
+</p>
 
 
 ### Referências
