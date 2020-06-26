@@ -67,6 +67,12 @@ A implementação desta função foi a mais complexa, comparando a com as outras
 
 - [x] **Implementação da Interpolação de cores**  
 
+O resultado obtido foi o seguinte:
+
+<p align="center">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/linhas.png">
+</p>
+
 
 
 #### DrawTriangle
