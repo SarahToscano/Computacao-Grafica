@@ -1,5 +1,6 @@
 # Computacao-Gráfica
 Repositório destinado a implementação das atividades práticas desenvolvidas na disciplina de Computação Gráfica, ministrada pelo professor Christian Azambuja, no Centro de Informática da UFPB.
+
 Autora: Sarah Andrade Toscano de Carvalho.
 
 ## Atividade 01: Rasterização de pontos e linhas. 
@@ -54,25 +55,28 @@ Para esta atividade foram definidos quatro requisitos:
 </p>
 
 #### DrawLine
-A função *DrawLine* utiliza as coordenadas de dois pontos para traçar uma reta de conexão entre eles, utilizando o algoritmo de Bresenham. Sua estrutura é a seguinte `DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`.
+A função *DrawLine* utiliza as coordenadas de dois pontos para traçar uma reta de conexão entre eles, utilizando o algoritmo de Bresenham. 
 
 A implementação desta função foi a mais complexa, comparando a com as outras funções desta atividade. Uma vez, que, foi necessário realizar alterações na sua estrtura para garantir que as retas pudessem ser rasterizadas em todos os octantes do plano. Para isso foram analisadas 4 situações:
 
-- [x] **Variação do eixo X negativa, Dx<0**  
+ - [x] **Variação do eixo X negativa, Dx<0**  
 
-  Dado dois pontos quaisquers e duas cores, a função de interpolação deve interpolar a cor da linha traçada com base na dimensão da reta e nas cores recebidas.
+   Nesta situação, a reta cresce para o lado negativo, desse modo, faz-se neceessário a inversão dos pontos. Então o ponto de origem é modificado para destino e vice-versa.
+
+ - [x] **Variação do eixo Y negativa, Dy<0**  
+
+   Quando a reta é crescente para o lado negativo do Y, é calculado o módulo do valor desta variação e dessa forma, o ΔY fica positivo para permitir a localização a reta na direção leste/nordeste. Concomitante, foram feitas modificações no aloritmo de Bresenham em relação ao valor calculado para a coordenada Y do ponto a ser rasterizado. Pelo fato do Y estar crescendo para o lado negativo, as atualizações de valores para esta variável devem diminuílo e não somá-lo a 1. 
+
+ - [x] **Variação do eixo Y maior do que o eixo X**
+
+    Neste caso, é realizada a atribução da variacao do eixo X ao eixo Y, e vice-versa. Essa situação exige uma atenção especial, pois possui mais casos especiais. Uma vez que a variação do eixo Y é maior que a do X, os parametros do laço de repetição *while* serão alterados para `while(y1>=y2)` ou `while(y1<=y1)`, dependendo do valor do Y1 e Y2. Além disso, assim como na situação anterior, o Y deverá ser decrementado caso o Y1 seja maior que o Y2.
   
-- [x] **Variação do eixo Y negativa, Dy<0**  
 
-  A função *PutPixel* recebe como entrada as coordenadas de um ponto e uma cor (RGBA). Para que dessa forma, possa rasterizar um ponto na memória de vídeo.
-  
-- [x] **Variação do eixo Y maior do que o eixo X**
+ - [x] **Variação nula no eixo X**
 
-  Esta função rasteriza uma linha utilizando o algoritmo de Bresenham. Para isso,receberá como entrada as coordenadas de dois pontos e as cores atribuídas aos seus respectivos vértices. Com os dados dessas cores é realizada uma interpolação e a reta plotada é colorida com uma tonalidade degradê entre essas duas cores. 
-
-- [x] **Variação nula no eixo X**
-
-O resultado obtido foi o seguinte:
+    Este caso especial, foi detectado durante os testes de implementação do programa. Dessa forma foi implementada uma lógica de restrição no código, específica para esta situação que quando a variação do eixo x é nula, apenas é aumentado ou decrementado o valor da coordenada Y. Esta situação vai depender da restrição 2.
+   
+Portanto, uma vez que todas essas restrições foram implementadas, a estrutura da função ficou da seguinte forma `DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`. Na qual o *p* é um ponteiro que contém os dados das coordenadas dos dois vértices, os structs *A*, e *B*  são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida para o pixel através do cálculo da interpolação. Abaixo é ilustrado o resultado para a rasterização de 4 linhas com diferentes inclinações e comprimento.
 
 <p align="center">
   <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/linhas.png">
@@ -83,7 +87,7 @@ O resultado obtido foi o seguinte:
 #### DrawTriangle
 Esta função consiste em três chamadas da função *DrawLine* para que três retas possam ser rasterizadas e formem o desenho de um triângulo. Cujas arestas possuem cores interpoladas de acordo com a atribuição da cor princiapal para cada vértice. 
 
-A função se estrutura assim `DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`, no qual o *p* é um ponteiro que contém os dados das coordenadas dos três vértices, os structs *A, B e C* são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida através do cálculo da interpolação.
+A função se estrutura de forma similar ao *DrawLine* e apresenta o seguinte perfil `DrawTriangle(Coordinates *p, Color *A, Color *B, Color *C, Color *Color_reference)`, no qual o *p* é um ponteiro que contém os dados das coordenadas dos três vértices, os structs *A, B e C* são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida através do cálculo da interpolação.
 
 Pelo fato da função *DrawLine* ter sido configurada para receber apenas dois pontos por vez, a DrawTriangle muda os parâmetros de coordenadas a cada rasterização de linha. Dessa forma, inicialmente é rasterizada a reta AB, em seguida BC e por fim, CA. Como as coordenadas são armazenadas em um struct, os valores das coordenadas são atualizados de acordo com a configuração da reta a ser rasterizada. O trecho de código abaixo exemplifica a atualização de parametros e da chamada da função. Vale salientar, que as cores também variam para cada vértice. 
 
