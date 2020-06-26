@@ -54,8 +54,19 @@ Para esta atividade foram definidos quatro requisitos:
 </p>
 
 #### DrawLine
+A função *DrawLine* utiliza as coordenadas de dois pontos para traçar uma reta de conexão entre eles, utilizando o algoritmo de Bresenham. Sua estrutura é a seguinte `DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`.
 
-`DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`
+A implementação desta função foi a mais complexa, comparando a com as outras funções desta atividade. Uma vez, que, foi necessário realizar alterações na sua estrtura para garantir que as retas pudessem ser rasterizadas em todos os octantes do plano. Para isso foram analisadas 4 situações:
+
+
+- [x] **Implementação da Interpolação de cores**  
+
+- [x] **Implementação da Interpolação de cores**  
+
+- [x] **Implementação da Interpolação de cores**  
+
+- [x] **Implementação da Interpolação de cores**  
+
 
 
 #### DrawTriangle
