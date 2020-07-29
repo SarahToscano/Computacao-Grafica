@@ -14,13 +14,15 @@ Para esta atividade foram definidos quatro requisitos:
 
 - [x] **Exercício 01 - Escala**  
 
-    Modificar a escala da matriz Model 
+    Modificar a escala da matriz Model. 
 
 - [x] **Exercício 02 - Translação**  
 
     Aplicar alterações na Matriz model para transladar a Figura.
 
-- [x] **Exercício 03 - Projeção Perspectiva**  
+- [x] **Exercício 03 - Projeção Perspectiva** 
+
+    Modificar a matriz de projeção para um d = 1/2.
 
 - [x] **Exercício 04 - Posição de Câmera**  
 
@@ -45,6 +47,17 @@ Para esta atividade foram definidos quatro requisitos:
 
   <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/trans.png">
+  </p>
+
+## Exercício 03: Projeção Perspectiva
+### Descrição
+  Para modificar a matriz de projeção para adicionarmos o parâmetro d = 1/2, foi utilizada a matriz de projeção que considera
+   a câmera na origem do seu sistema de coordenadas. Para alterarmos o código é importante salientar que a matriz da forma em que foi estudada
+   apresenta-se de modo diferente na programação. Pois suas linhas equivalem as colunas da matriz de projeção do arquivo main.cpp, ou seja
+   o 'd' deve ser incluido na Dessa forma, foi preciso adicionar o valor 'd' na posição 14 do 'proj_array', enquanto o valor '-1/d'
+   deve ser inserido na posição 11. Dessa forma ficamos com o seguinte resultado:
+  <p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/proje.png">
   </p>
 
 ### Referências
