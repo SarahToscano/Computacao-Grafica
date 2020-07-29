@@ -70,14 +70,14 @@ Para esta atividade foram definidos quatro requisitos:
   com o intuito de modificar a Figura de dois triangulos, um azul e outro vermelho.
   A metodologia adotada foi a mesma dos exercícios 1, 2 e 3, respectivamente. 
 
-    - Inicialmente a matriz model foi alterada para que a Figura tivesse os seguintes fatores em escala
-    (x, y, z) = (0.8, 1.2, 0.2). 
-  
-    - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.3, -0.4, 0).
+  - Inicialmente a matriz model foi alterada para que a Figura tivesse os seguintes fatores em escala
+  (x, y, z) = (0.8, 1.2, 0.2). 
 
-    - A matriz de projeção perspectiva foi alterada para um d equivalente a 1/10.
+  - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.3, -0.4, 0).
 
-    Até o momento o resultado parcial das alterações foi o seguinte:
+  - A matriz de projeção perspectiva foi alterada para um d equivalente a 1/10.
+
+  Até o momento o resultado parcial das alterações foi o seguinte:
 
   <p align="center">
       <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/parcial.png">
