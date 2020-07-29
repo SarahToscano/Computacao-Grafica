@@ -36,7 +36,7 @@ Para esta atividade foram definidos quatro requisitos:
 Por fim, o resultado obtido com essa função é apresentado na Figura a seguir:
 
   <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/escala.png">
 </p>
 
 ### Referências
