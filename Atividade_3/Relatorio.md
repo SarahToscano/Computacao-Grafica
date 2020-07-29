@@ -60,6 +60,41 @@ Para esta atividade foram definidos quatro requisitos:
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/proje.png">
   </p>
 
+
+## Exercício 04: Posição da Câmera
+### Descrição
+
+## Exercício 05: Transformação Livre
+### Descrição
+  Para essa etapa de tranformação livre optou-se alterar os valores das matrizes de visualação, modelo e perspectiva
+  com o intuito de modificar a Figura de dois triangulos, um azul e outro vermelho.
+  A metodologia adotada foi a mesma dos exercícios 1, 2 e 3, respectivamente. 
+
+    - Inicialmente a matriz model foi alterada para que a Figura tivesse os seguintes fatores em escala
+    (x, y, z) = (0.8, 1.2, 0.2). 
+  
+    - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.3, -0.4, 0).
+
+    - A matriz de projeção perspectiva foi alterada para um d equivalente a 1/10.
+
+    Até o momento o resultado parcial das alterações foi o seguinte:
+
+  <p align="center">
+      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/parcial.png">
+  </p>
+
+  - Ao modificar o posicionamento da câmera através da matriz view para as coordenadas (-1/0.8, 0.8, 1.2) foi obtido
+  o resultado final, o qual está ilustrado abaixo
+
+<p align="center">
+      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/final.png">
+  </p>
+
+
+  O resultado obtido foi o seguinte:
+
+
+  
 ### Referências
 
 - [Definição do projeto](https://sig-arq.ufpb.br/arquivos/2020251182af5d2276812b448ad7142ee/trabalho_3.pdf)
