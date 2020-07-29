@@ -64,6 +64,10 @@ Para esta atividade foram definidos quatro requisitos:
 ## Exercício 04: Posição da Câmera
 ### Descrição
 
+<p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/camera.png">
+  </p>
+
 ## Exercício 05: Transformação Livre
 ### Descrição
   Para essa etapa de tranformação livre optou-se alterar os valores das matrizes de visualação, modelo e perspectiva
@@ -91,8 +95,7 @@ Para esta atividade foram definidos quatro requisitos:
   </p>
 
 
-  O resultado obtido foi o seguinte:
-
+Dessa forma, essas foram as modificações livres realizadas no Figura incial da atividade.
 
   
 ### Referências

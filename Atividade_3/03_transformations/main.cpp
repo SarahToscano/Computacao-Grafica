@@ -66,27 +66,51 @@ void Display(void) {
 
     // Matriz Model ///////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float model_array[16] = {1.0f*0.8, 0.0f, 0.0f, 0.0f, 
-                             0.0f, 1.0f*1.2, 0.0f, 0.0f, 
-                             0.0f, 0.0f, 1.0f*0.2, 0.0f, 
-                             0.3f, -0.4f, 0.0f, 1.0f};
+    float model_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
+                             0.0f, 1.0f, 0.0f, 0.0f, 
+                             0.0f, 0.0f, 1.0f, 0.0f, 
+                             0.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4 model_mat = glm::make_mat4(model_array);
 
     // Matriz View ////////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float view_array[16] = {-1/0.8, 0.0f, 0.0f, 0.0f, 
-                            0.0f, 0.8f, 0.0f, 0.0f, 
-                            0.0f, 0.0f, 1.2f, 0.0f, 
-                            0.0f, 0.0f, 0.0f, 1.0f};
 
+    /*float view_array[16] = {-0.1f, 0.0f, 0.0f, 0.0f, 
+                            0.0f, 0.1f, 0.0f, 0.0f, 
+                            0.0f, 0.0f, 0.25f, 0.0f, 
+                            0.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4 view_mat = glm::make_mat4(view_array);
+    */
+
+    glm::vec3 camera_position = glm::vec3(-0.1f,0.1f,0.25f);
+    glm::vec3 up_vector        = glm::vec3(0.0f,1.0f,0.0f);
+    glm::vec3 camera_direction = glm::vec3(0.0f,0.0f,0.0f);
+
+    glm::vec3 Zc = -glm::normalize(camera_direction - camera_position);
+    glm::vec3 Xc = glm::normalize(glm::cross(up_vector, Zc));
+    glm::vec3 Yc = glm::normalize(glm::cross(Zc, Xc));
+
+    //B Matrix
+    glm::mat4 B = glm::mat4( glm::vec4(Xc.x, Yc.x, Zc.x, 0),
+                             glm::vec4(Xc.y , Yc.y, Zc.y, 0),
+                             glm::vec4(Xc.z, Yc.z, Zc.z, 0),
+                             glm::vec4(0, 0, 0, 1));
+    //T Matrix 
+    glm::mat4 T = glm::mat4( glm::vec4(1,0,0,0),
+                             glm::vec4(0,1,0,0),
+                             glm::vec4(0,0,1,0),
+                             glm::vec4(-camera_position.x, -camera_position.y, -camera_position.z, 1));
+
+    // Matriz View ////////////////////////////////////////////////////////////
+    glm::mat4 view_mat = B*T;
+
 
     // Matriz Projection //////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
     float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
                             0.0f, 1.0f, 0.0f, 0.0f, 
-                            0.0f, 0.0f, 1.0f, -1/0.1f, 
-                            0.0f, 0.0f, 0.1f, 1.0f};
+                            0.0f, 0.0f, 1.0f, -1/0.5f, 
+                            0.0f, 0.0f, 0.5f, 1.0f};
 
     glm::mat4 proj_mat = glm::make_mat4(proj_array);
 
