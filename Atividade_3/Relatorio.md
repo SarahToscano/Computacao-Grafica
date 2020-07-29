@@ -28,24 +28,24 @@ Para esta atividade foram definidos quatro requisitos:
 
 ## Exercício 01: Escala
 ### Descrição
-   Para modificar a escala da imagem gerada pelo programa foi adicionado um fator multiplicate na matriz view, no qual
-   o componente x da matriz identidade (posição 0 do model_array) foi multiplicado por 0.33 e o eixo y foi multiplicado por 1,5 (posição 5 do model_array). Dessa forma o resultado
-   obtido está ilustrado na Figura a seguir:   
+  Para modificar a escala da imagem gerada pelo programa foi adicionado um fator multiplicate na matriz view, no qual
+  o componente x da matriz identidade (posição 0 do model_array) foi multiplicado por 0.33 e o eixo y foi multiplicado por 1,5 (posição 5 do model_array). Dessa forma o resultado
+  obtido está ilustrado na Figura a seguir:   
 
   <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/escala.png">
-</p>
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/escala.png">
+  </p>
 
 ## Exercício 02: Translação
 ### Descrição
-    Para aplicar a translação em coordenadas homogêneas foi utilizado o seguinte princípio, a nova posição da Figura no eixo x
-    seria equivalente a posição original somada da distância equivalencia a translação no eixo. Dessa forma, como o intuito seria transladar
-    a figura com a escala (1,0,0) foi adicionado o valor (1) na última linha da matriz model. Assim a posição 12 desse vetor foi alterada com o valor da 
-    distância equivalente a translação. Para as coordenadas Y e Z não foram necessárias alterações. O resultado está ilustrado na Figura abaixo:
+  Para aplicar a translação em coordenadas homogêneas foi utilizado o seguinte princípio, a nova posição da Figura no eixo x
+  seria equivalente a posição original somada da distância equivalencia a translação no eixo. Dessa forma, como o intuito seria transladar
+  a figura com a escala (1,0,0) foi adicionado o valor (1) na última linha da matriz model. Assim a posição 12 desse vetor foi alterada com o valor da 
+  distância equivalente a translação. Para as coordenadas Y e Z não foram necessárias alterações. O resultado está ilustrado na Figura abaixo:
 
-      <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/trans.png">
-</p>
+  <p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/trans.png">
+  </p>
 
 ### Referências
 
