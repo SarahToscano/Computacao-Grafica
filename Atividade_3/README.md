@@ -72,7 +72,7 @@ Para esta atividade foram definidos cinco requisitos:
 
 ## Exercício 03: Projeção Perspectiva
 ### Descrição
-  Para atribuir uma visão em perspectiva da imagem é preciso modificar a matriz de projeção para adicionarmos o parâmetro 
+  Para atribuir uma projeção perspectiva da imagem é preciso modificar a matriz de projeção para adicionarmos o parâmetro 
   'd' que equivale a distancia do centro de projeção  até a origem do sistema de coordenadas da câmera. Para este exercício
   foi utilizado uma distância de 0.5.
   A matriz projeção utilizada consiste na Figura abaixo, a qual considera a câmera na origem de seu sistemas de coordenadas.
@@ -90,6 +90,35 @@ Para esta atividade foram definidos cinco requisitos:
 
 ## Exercício 04: Posição da Câmera
 ### Descrição
+
+Neste exercício, para realizar modificações no posiconamento da câmera oram realizadas algumas implementações de transformações
+e foi mantido as alterações na matriz de projeção do tópico anterior.
+
+Para construir um sistema de coordenadas básicos para a câmera é primordial definir a configuração de 3 itens.
+Na lista abaixo eles são defindos e também são apresentados os valores utilizados para esta implementação.
+- A posição da câmera (x,y,z) = (-0.1,0.1,0.25);
+- Ponto para o qual a câmera está direcionada (x,y,z) = (0,0,0);
+- O vetor UP (x,y,z) = (0,1,0).
+
+Uma vez que estes dados são definidos é preciso realizar o seguinte cálculo:
+
+<p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/calculo.png">
+  </p>
+
+Dessa forma teremos as coordenadas da matriz B, que serão utilizadas para calcular a matriz de visualização.
+Para a realização desse cálculo foram utizadas funções geométricas do glm como o normalize e o cross. Tal recursos
+são utilizados nas linhas 90-93 do arquivo main.cpp.
+
+Após esses cálculos temos a matriz B, no entanto ainda é necessário preencher um array com sua representação transposta e
+multiplicarmos pela matriz exemplificada na Figura abaixo:
+
+<p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/calculo2.png">
+  </p>
+
+Dessa forma, estabelecemos a matriz de visualização com o produto entre essas duas matrizes. Desta forma o resultado
+obtido foi o seguinte: 
 
 <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/camera.png">
@@ -129,3 +158,4 @@ Dessa forma, essas foram as modificações livres realizadas no Figura incial da
 
 - [Definição do projeto](https://sig-arq.ufpb.br/arquivos/2020251182af5d2276812b448ad7142ee/trabalho_3.pdf)
 - [Código suporte - disponibilizado pelo professor](https://github.com/capagot/icg/tree/master/03_transformations)
+- [Funções Geométricas do GLM](https://glm.g-truc.net/0.9.4/api/a00131.html)
