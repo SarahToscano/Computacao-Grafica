@@ -72,7 +72,7 @@ Para esta atividade foram definidos cinco requisitos:
   O resultado está ilustrado na Figura abaixo:
 
   <p align="center">
-    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/  master/Atividade_3/Imagens/trans.png">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/translacao_figura.png">
   </p>
 
 ## Exercício 03: Projeção Perspectiva
