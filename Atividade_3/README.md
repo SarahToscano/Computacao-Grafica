@@ -4,7 +4,9 @@
 ## Especificação da Atividade
 
 Esta atividade consiste em 5 questões, as quais buscam realizar modificações na estrutura do pipeline 
-gráfico através da implementação de transformações geométricas. Esta atividade consistirá em alterações
+gráfico através da implementação de transformações geométricas. 
+
+Esta atividade consistirá em alterações
 a partir de um código em C++ disponibilizado pelo professor da disciplina de Computação Gráfica. Esta implementação
 terá o auxílio da biblioteca glm e sua execução ocorrerá nos shaders do OpenGL.
 
@@ -35,10 +37,11 @@ Para esta atividade foram definidos cinco requisitos:
     Este exercício consiste em modificações livres nas matrizes de visão, direção e modelo.
 
 ## Exercício 01: Escala
-### Descrição
+### Estratégias e Resultados
   Para aplicar uma modificação escalar em uma Figura, deve-se adicionar um fator multiplicativo na matriz modelo. No camera_position
   deste exercício a escala aplicada a Figura foi (x,y,z) = (0.33, 1.5, 0). Para isso, o componente x da matriz identidade (posição 0 do model_array) 
   foi multiplicado pela sua respectiva escala (0.33) e a posição 5 do model_array, a qual representa o eixo y, foi multiplicado por 1,5. 
+  
   A modificação do código está ilustrada na Figura abaixo:
 
    <p align="center">
@@ -52,10 +55,12 @@ Para esta atividade foram definidos cinco requisitos:
   </p>
 
 ## Exercício 02: Translação
-### Descrição
+### Estratégias e Resultados
   Para aplicar a translação em coordenadas homogêneas foi utilizado o seguinte princípio, a nova posição da Figura no eixo x
   seria equivalente a posição original somada da distância equivalencia a translação no eixo. Dessa forma, como o intuito seria transladar
-  a figura com (x,y,z) = (1,0,0). Assim, modficando a matriz modelo com esses valores, a sua posição 12 foi alterada com o valor da 
+  a figura com (x,y,z) = (1,0,0). 
+  
+  Assim, modficando a matriz modelo com esses valores, a sua posição 12 foi alterada com o valor da 
   distância equivalente ao X da translação. Para as coordenadas Y e Z não foram necessárias alterações. Em relação ao exercício anterior, 
   os fatores de escala foram restaurados para o valor unitário e apenas houve a inclusão da modificação citada anteriormente.
   As alterações no código são ilustradas a seguir:
@@ -71,7 +76,7 @@ Para esta atividade foram definidos cinco requisitos:
   </p>
 
 ## Exercício 03: Projeção Perspectiva
-### Descrição
+### Estratégias e Resultados
   Para atribuir uma projeção perspectiva da imagem é preciso modificar a matriz de projeção para adicionarmos o parâmetro 
   'd' que equivale a distancia do centro de projeção  até a origem do sistema de coordenadas da câmera. Para este exercício
   foi utilizado uma distância de 0.5.
@@ -89,7 +94,7 @@ Para esta atividade foram definidos cinco requisitos:
 
 
 ## Exercício 04: Posição da Câmera
-### Descrição
+### Estratégias e Resultados
 
 Neste exercício, para realizar modificações no posiconamento da câmera oram realizadas algumas implementações de transformações
 e foi mantido as alterações na matriz de projeção do tópico anterior.
@@ -125,7 +130,7 @@ obtido foi o seguinte:
   </p>
 
 ## Exercício 05: Transformação Livre
-### Descrição
+### Estratégias e Resultados
   Para essa etapa de tranformação livre optou-se alterar os valores das matrizes de visualação, modelo e perspectiva
   com o intuito de modificar a Figura de dois triangulos, um azul e outro vermelho.
   A metodologia adotada foi a mesma dos exercícios 1, 2 e 3, respectivamente. 
