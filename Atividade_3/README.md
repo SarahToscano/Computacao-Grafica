@@ -136,27 +136,25 @@ obtido foi o seguinte:
   A metodologia adotada foi a mesma dos exercícios 1, 2 e 3, respectivamente. 
 
   - Inicialmente a matriz model foi alterada para que a Figura tivesse os seguintes fatores em escala
-  (x, y, z) = (0.8, 1.2, 0.2). 
+  (x, y, z) = (0.95, 1.6, 0.2). 
 
-  - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.3, -0.4, 0).
+  - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.3, -0.9, 0).
 
-  - A matriz de projeção perspectiva foi alterada para um d equivalente a 1/10.
+  - A matriz de projeção perspectiva foi alterada para um d equivalente a 3.4.
 
-  Até o momento o resultado parcial das alterações foi o seguinte:
+  - O vetor UP ficou na direção (0,1,0);
 
-  <p align="center">
-      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/parcial.png">
-  </p>
+  - O ponto de visão da câmera foi (0,0,0);
 
-  - Ao modificar o posicionamento da câmera através da matriz view para as coordenadas (-1/0.8, 0.8, 1.2) foi obtido
-  o resultado final, o qual está ilustrado abaixo
+  - O posicionamento da câmera através da matriz view para as coordenadas ficou (-1/0.8, 0.8, 1.2)
+
+Assim, o resultado final, o qual está ilustrado abaixo
 
 <p align="center">
-      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/final.png">
+      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/final2.png">
   </p>
 
-
-Dessa forma, essas foram as modificações livres realizadas no Figura incial da atividade.
+  Dessa forma, essas foram as modificações livres realizadas no Figura incial da atividade.
 
   
 ### Referências
