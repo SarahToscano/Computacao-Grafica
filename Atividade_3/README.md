@@ -67,16 +67,22 @@ Para esta atividade foram definidos cinco requisitos:
   O resultado está ilustrado na Figura abaixo:
 
   <p align="center">
-    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/trans.png">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/  master/Atividade_3/Imagens/trans.png">
   </p>
 
 ## Exercício 03: Projeção Perspectiva
 ### Descrição
-  Para modificar a matriz de projeção para adicionarmos o parâmetro d = 1/2, foi utilizada a matriz de projeção que considera
-   a câmera na origem do seu sistema de coordenadas. Para alterarmos o código é importante salientar que a matriz da forma em que foi estudada
-   apresenta-se de modo diferente na programação. Pois suas linhas equivalem as colunas da matriz de projeção do arquivo main.cpp, ou seja
-   o 'd' deve ser incluido na Dessa forma, foi preciso adicionar o valor 'd' na posição 14 do 'proj_array', enquanto o valor '-1/d'
-   deve ser inserido na posição 11. Dessa forma ficamos com o seguinte resultado:
+  Para atribuir uma visão em perspectiva da imagem é preciso modificar a matriz de projeção para adicionarmos o parâmetro 
+  'd' que equivale a distancia do centro de projeção  até a origem do sistema de coordenadas da câmera. Para este exercício
+  foi utilizado uma distância de 0.5.
+  A matriz projeção utilizada consiste na Figura abaixo, a qual considera a câmera na origem de seu sistemas de coordenadas.
+  
+  <p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/matriz_de_projecao.png">
+  </p>
+
+  Dessa forma, foi o d foi substituido na matriz de projeção nas posições indicadas conforme a Figura e o resultado obtido
+  com a compilação do código foi o seguinte:
   <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/proje.png">
   </p>
