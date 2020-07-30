@@ -64,25 +64,25 @@ void Display(void) {
     // Seleciona o Shader Program a ser utilizado.
     glUseProgram(shader_program);
 
-    float scale_x=0.95, scale_y=1.6, scale_z=0.2;
+    float scale_x=0.95, scale_y=1.8, scale_z=1.8;
     // Matriz Model ///////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
     float model_array[16] = {1.0f*scale_x, 0.0f, 0.0f, 0.0f, 
                              0.0f, 1.0f*scale_y, 0.0f, 0.0f, 
                              0.0f, 0.0f, 1.0f*scale_z, 0.0f, 
-                             0.3f, -0.9f, 0.0f, 1.0f};
+                             0.6f, -0.9f, 0.6f, 1.0f};
     glm::mat4 model_mat = glm::make_mat4(model_array);
 
     // Matriz View ////////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-
+/*
     float view_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
                             0.0f, 1.0f, 0.0f, 0.0f, 
                             0.0f, 0.0f, 1.0f, 0.0f, 
                             0.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4 view_mat = glm::make_mat4(view_array);
-    
-/*
+    */
+
     glm::vec3 camera_position = glm::vec3(-1/0.8f,0.8f,1.2f);
     glm::vec3 up_vector        = glm::vec3(0.0f,1.0f,0.0f);
     glm::vec3 camera_direction = glm::vec3(0.0f,0.0f,0.0f);
@@ -104,7 +104,7 @@ void Display(void) {
 
     // Matriz View ////////////////////////////////////////////////////////////
     glm::mat4 view_mat = Bt*T;
-*/
+
     // Matriz Projection //////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
     float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 

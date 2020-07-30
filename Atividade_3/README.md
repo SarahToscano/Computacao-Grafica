@@ -136,9 +136,9 @@ obtido foi o seguinte:
   A metodologia adotada foi a mesma dos exercícios 1, 2 e 3, respectivamente. 
 
   - Inicialmente a matriz model foi alterada para que a Figura tivesse os seguintes fatores em escala
-  (x, y, z) = (0.95, 1.6, 0.2). 
+  (x, y, z) = (0.95, 1.8, 1.8). 
 
-  - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.3, -0.9, 0).
+  - Em seguida, ainda na matriz model foi adicionado o fator translação em (x,y,z) = (0.6, -0.9, 0.6).
 
   - A matriz de projeção perspectiva foi alterada para um d equivalente a 3.4.
 
@@ -151,7 +151,7 @@ obtido foi o seguinte:
 Assim, o resultado final, o qual está ilustrado abaixo
 
 <p align="center">
-      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/final2.png">
+      <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/final3.png">
   </p>
 
   Dessa forma, essas foram as modificações livres realizadas no Figura incial da atividade.
