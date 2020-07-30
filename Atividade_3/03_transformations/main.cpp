@@ -64,24 +64,25 @@ void Display(void) {
     // Seleciona o Shader Program a ser utilizado.
     glUseProgram(shader_program);
 
+    float scale_x=1, scale_y=1;
     // Matriz Model ///////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float model_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
-                             0.0f, 1.0f, 0.0f, 0.0f, 
+    float model_array[16] = {1.0f*scale_x, 0.0f, 0.0f, 0.0f, 
+                             0.0f, 1.0f*scale_y, 0.0f, 0.0f, 
                              0.0f, 0.0f, 1.0f, 0.0f, 
-                             0.0f, 0.0f, 0.0f, 1.0f};
+                             1.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4 model_mat = glm::make_mat4(model_array);
 
     // Matriz View ////////////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
 
-    /*float view_array[16] = {-0.1f, 0.0f, 0.0f, 0.0f, 
-                            0.0f, 0.1f, 0.0f, 0.0f, 
-                            0.0f, 0.0f, 0.25f, 0.0f, 
+    float view_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
+                            0.0f, 1.0f, 0.0f, 0.0f, 
+                            0.0f, 0.0f, 1.0f, 0.0f, 
                             0.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4 view_mat = glm::make_mat4(view_array);
-    */
-
+    
+/*
     glm::vec3 camera_position = glm::vec3(-0.1f,0.1f,0.25f);
     glm::vec3 up_vector        = glm::vec3(0.0f,1.0f,0.0f);
     glm::vec3 camera_direction = glm::vec3(0.0f,0.0f,0.0f);
@@ -104,13 +105,22 @@ void Display(void) {
     // Matriz View ////////////////////////////////////////////////////////////
     glm::mat4 view_mat = B*T;
 
-
+*/
     // Matriz Projection //////////////////////////////////////////////////////
     // You will have to change the contents of this matrix for the exercises
-    float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
+ /*   float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
                             0.0f, 1.0f, 0.0f, 0.0f, 
                             0.0f, 0.0f, 1.0f, -1/0.5f, 
                             0.0f, 0.0f, 0.5f, 1.0f};
+
+    glm::mat4 proj_mat = glm::make_mat4(proj_array);
+
+    */
+
+    float proj_array[16] = {1.0f, 0.0f, 0.0f, 0.0f, 
+                            0.0f, 1.0f, 0.0f, 0.0f, 
+                            0.0f, 0.0f, 1.0f, 0.0f, 
+                            0.0f, 0.0f, 0.0f, 1.0f};
 
     glm::mat4 proj_mat = glm::make_mat4(proj_array);
 

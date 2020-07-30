@@ -32,13 +32,20 @@ Para esta atividade foram definidos cinco requisitos:
   
 - [x] **Exercício 05 - Transformação Livre**  
 
-    Este exercício consiste em modificações nas matrizes de visão, direção e modelo.
+    Este exercício consiste em modificações livres nas matrizes de visão, direção e modelo.
 
 ## Exercício 01: Escala
 ### Descrição
-  Para modificar a escala da imagem gerada pelo programa foi adicionado um fator multiplicate na matriz view, no qual
-  o componente x da matriz identidade (posição 0 do model_array) foi multiplicado por 0.33 e o eixo y foi multiplicado por 1,5 (posição 5 do model_array). Dessa forma o resultado
-  obtido está ilustrado na Figura a seguir:   
+  Para aplicar uma modificação escalar em uma Figura, deve-se adicionar um fator multiplicativo na matriz modelo. No camera_position
+  deste exercício a escala aplicada a Figura foi (x,y,z) = (0.33, 1.5, 0). Para isso, o componente x da matriz identidade (posição 0 do model_array) 
+  foi multiplicado pela sua respectiva escala (0.33) e a posição 5 do model_array, a qual representa o eixo y, foi multiplicado por 1,5. 
+  A modificação do código está ilustrada na Figura abaixo:
+
+   <p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/escala_code.png">
+  </p>
+
+  Dessa forma o resultado obtido está ilustrado na Figura a seguir:   
 
   <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/escala.png">
@@ -48,8 +55,16 @@ Para esta atividade foram definidos cinco requisitos:
 ### Descrição
   Para aplicar a translação em coordenadas homogêneas foi utilizado o seguinte princípio, a nova posição da Figura no eixo x
   seria equivalente a posição original somada da distância equivalencia a translação no eixo. Dessa forma, como o intuito seria transladar
-  a figura com a escala (1,0,0) foi adicionado o valor (1) na última linha da matriz model. Assim a posição 12 desse vetor foi alterada com o valor da 
-  distância equivalente a translação. Para as coordenadas Y e Z não foram necessárias alterações. O resultado está ilustrado na Figura abaixo:
+  a figura com (x,y,z) = (1,0,0). Assim, modficando a matriz modelo com esses valores, a sua posição 12 foi alterada com o valor da 
+  distância equivalente ao X da translação. Para as coordenadas Y e Z não foram necessárias alterações. Em relação ao exercício anterior, 
+  os fatores de escala foram restaurados para o valor unitário e apenas houve a inclusão da modificação citada anteriormente.
+  As alterações no código são ilustradas a seguir:
+
+  <p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/translacao_code.png">
+  </p>
+  
+  O resultado está ilustrado na Figura abaixo:
 
   <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_3/Imagens/trans.png">
