@@ -1,16 +1,17 @@
-# Computacao-Gráfica
+# Pipeline Gráfico
 
-# Atividade 05
-## Descrição
+# Computação Gráfica - Atividade 05
+## Especificação da Atividade
 
-O objetivo deste trabalho é familiarizar os alunos com a estrutura do pipeline gráfico através da
-implementação das transformações geométricas que o compõem. Esta implementação será feita com
-auxílio da biblioteca glm e sua execução ocorrerá nos shaders do OpenGL.
+Esta atividade consiste em 5 questões, as quais buscam realizar modificações na estrutura do pipeline 
+gráfico através da implementação de transformações geométricas. Esta atividade consistirá em alterações
+a partir de um código em C++ disponibilizado pelo professor da disciplina de Computação Gráfica. Esta implementação
+terá o auxílio da biblioteca glm e sua execução ocorrerá nos shaders do OpenGL.
 
   
 ### Requisitos
 
-Para esta atividade foram definidos quatro requisitos:
+Para esta atividade foram definidos cinco requisitos:
 
 - [x] **Exercício 01 - Escala**  
 
@@ -18,15 +19,20 @@ Para esta atividade foram definidos quatro requisitos:
 
 - [x] **Exercício 02 - Translação**  
 
-    Aplicar alterações na Matriz model para transladar a Figura.
+    Modificar a Matriz model para transladar a Figura.
 
 - [x] **Exercício 03 - Projeção Perspectiva** 
 
-    Modificar a matriz de projeção para um d = 1/2.
+    Modificar a matriz de projeção para aplicar uma distorção perspectiva com a distância de 0.5 do centro de projeção
+    até a origem do sistema de coordenadas da câmera.
 
 - [x] **Exercício 04 - Posição de Câmera**  
-
+    Nesta etapa será necessário construir o espaço de coordenadas da câmera, definido o seu posicionamento, sua posição de visualação
+    e a posição do vetor up.
+  
 - [x] **Exercício 05 - Transformação Livre**  
+
+    Este exercício consiste em modificações nas matrizes de visão, direção e modelo.
 
 ## Exercício 01: Escala
 ### Descrição
