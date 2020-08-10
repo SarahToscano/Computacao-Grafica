@@ -51,7 +51,7 @@ Para esta atividade foram definidos quatro requisitos:
   A PutPixel foi alocada dentro de um laço de repetição na função *MyGlDraw*, para que fossem rasterizados 3 pontos de cores distintas, trinta vezes, a cada atualização da tela. O resultado obtido é ilustrado na Figura abaixo.
   
   <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/pontos.png">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_1/pontos.png">
 </p>
 
 #### DrawLine
@@ -79,7 +79,7 @@ A implementação desta função foi a mais complexa, comparando a com as outras
 Portanto, uma vez que todas essas restrições foram implementadas, a estrutura da função ficou da seguinte forma `DrawLine (Coordinates *p, Color *A, Color *B, Color *Color_reference)`. Na qual o *p* é um ponteiro que contém os dados das coordenadas dos dois vértices, os structs *A*, e *B*  são as cores originais dos vértices, enquanto o *Color_reference* é a cor definida para o pixel através do cálculo da interpolação. Abaixo é ilustrado o resultado para a rasterização de 4 linhas com diferentes inclinações e comprimento.
 
 <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/linhas.png">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_1/linhas.png">
 </p>
 
 
@@ -105,7 +105,7 @@ Pelo fato da função *DrawLine* ter sido configurada para receber apenas dois p
 Por fim, o resultado obtido com essa função é apresentado na Figura a seguir:
 
   <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/triangulo.png">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_1/triangulo.png">
 </p>
 
 ### Conclusão
