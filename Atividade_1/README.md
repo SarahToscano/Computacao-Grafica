@@ -28,7 +28,7 @@ Para esta atividade foram definidos quatro requisitos:
   
 - [x] **Implementação da função PutPixel**  
 
-  A função *PutPixel* recebe como entrada as coordenadas de um ponto e uma cor (RGBA). Para que dessa forma, possa rasterizar um ponto na memória de vídeo.
+  A função *PutPixel* recebe como entrada as coordenadas de um ponto e uma cor (RGBA). Para que dessa forma possa rasterizar um ponto na memória de vídeo.
   
 - [x] **Implementação da função DrawLine**
 
