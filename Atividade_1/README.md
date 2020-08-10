@@ -113,7 +113,7 @@ Por fim, o resultado obtido com essa função é apresentado na Figura a seguir:
 Por fim, com todas as funções implementadas ao executar o *MyGlDraw* serão rasterizados, os pontos, linhas e o triângulo, com as coordenadas definidas no escopo do programa. O resultado encontrado está ilustrado abaixo.
 
   <p align="center">
-  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/todos.png">
+  <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_1/todos.png">
 </p>
 
 ### Referências
