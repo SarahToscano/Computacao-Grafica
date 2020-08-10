@@ -59,8 +59,8 @@ atualizam-se esses valores e obtem-se o seguinte resultado.
 
   ### Solução e Resultado
   
-    Desse modo, o Cálculo da potência teve de ser realizado de forma bruta através de um laço de repetição (sem o uso da função "pow"), com o n igual a 65, para que dessa forma o resultado esperado fosse alcançado.
-    O resultado foi o seguinte:
+  Desse modo, o Cálculo da potência teve de ser realizado de forma bruta através de um laço de repetição (sem o uso da função "pow"), com o n igual a 65, para que dessa forma o resultado esperado fosse alcançado.
+  O resultado foi o seguinte:
 
   <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Image/bule2.png">
