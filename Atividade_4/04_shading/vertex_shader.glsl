@@ -30,7 +30,14 @@ void main() {
     
     float cos_alfa= dot(R,V);
     
-    I = I_a*k_a + I_p*(k_d*cos_theta + k_s*(pow(cos_alfa,n)));
+    int i=0;
+    float pot=1;
+    while (i<65){
+        pot*=cos_alfa;
+        i++;
+    }
+       
+    I = I_a*k_a + I_p*(k_d*cos_theta + k_s*pot);
 
 
     gl_Position = proj_mat * view_mat * model_mat * vec4(obj_spc_vertex_pos, 1.0);
