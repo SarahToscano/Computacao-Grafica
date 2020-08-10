@@ -57,12 +57,12 @@ atualizam-se esses valores e obtem-se o seguinte resultado.
   Pode-se perceber que no fundo do bule temos uma iluminação não desejada, dessa forma. Foi realizado o caso de teste com o n igual a 65 e 
   mantendo-se o uso da função "pow", mas o resultado permaneceu o mesmo.
 
-  ### Resultado
+  ### Solução e Resultado
   
     Desse modo, o Cálculo da potência teve de ser realizado de forma bruta através de um laço de repetição (sem o uso da função "pow"), com o n igual a 65, para que dessa forma o resultado esperado fosse alcançado.
     O resultado foi o seguinte:
 
-     <p align="center">
+  <p align="center">
     <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Image/bule2.png">
   </p>
 
