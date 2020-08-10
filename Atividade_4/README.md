@@ -1,4 +1,4 @@
-# Pipeline Gráfico
+# Modelos de Iluminação
 
 # Computação Gráfica - Atividade 04
 ## Especificação da Atividade
@@ -31,7 +31,7 @@ Dessa forma, uma vez que o resultado deste produto é equivalente ao cosseno pre
 atualizam-se esses valores e obtem-se o seguinte resultado.
 
  <p align="center">
-    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Imagens/bule1.png">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Image/bule1.png">
   </p>
 
 
@@ -47,21 +47,27 @@ atualizam-se esses valores e obtem-se o seguinte resultado.
   ### Problemas
 
   Ao ajustar o modelo do cálculo de iluminação para o modelo Phong é necessário inclui na fórmula a potência do termo espetacular.
-  No entanto, ao realizar o cálculo de potência com a função "pow" o resultado obtido foi diferente do esperado, como ilustra a Figura baixo.
+  No entanto, ao realizar o cálculo de potência com a função "pow" com o n igual a 64, o resultado obtido foi diferente do esperado, como ilustra a Figura baixo.
 
   <p align="center">
-    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Imagens/bule_errado.png">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Image/bule_errado.png">
   </p>
 
 
-  Pode-se perceber que no fundo do bule temos uma iluminação não desejada, dessa forma. O Cálculo da potência foi realizado
-  de forma bruta através de um laço de repetição para que dessa forma o resultado esperado fosse alcançado.
+  Pode-se perceber que no fundo do bule temos uma iluminação não desejada, dessa forma. Foi realizado o caso de teste com o n igual a 65 e 
+  mantendo-se o uso da função "pow", mas o resultado permaneceu o mesmo.
 
+  ### Resultado
   
+    Desse modo, o Cálculo da potência teve de ser realizado de forma bruta através de um laço de repetição (sem o uso da função "pow"), com o n igual a 65, para que dessa forma o resultado esperado fosse alcançado.
+    O resultado foi o seguinte:
+
+     <p align="center">
+    <img src="https://github.com/SAndradeTC/Computacao-Grafica/blob/master/Atividade_4/Image/bule2.png">
+  </p>
+
+
   
 ### Referências
 
-- [Definição do projeto](https://sig-arq.ufpb.br/arquivos/2020251182af5d2276812b448ad7142ee/trabalho_3.pdf)
-- [Código suporte - disponibilizado pelo professor](https://github.com/capagot/icg/tree/master/03_transformations)
-- [Funções Geométricas do GLM](https://glm.g-truc.net/0.9.4/api/a00131.html)
-
+- [Definição do projeto](https://sig-arq.ufpb.br/arquivos/202004601628a22351319359d68daf29e/trabalho_4.pdf)
